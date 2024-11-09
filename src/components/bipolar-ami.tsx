@@ -23,7 +23,7 @@ function BIPOLAR_AMI({
         tempStyleListBottom.push("border-l-2 border-b-2");
         isHigh = 0;
       } else if (isHigh === 0 && prev === 1 && curr === 1) {
-        tempStyleListTop.push("border-l-2 border-t-2 border-r-2");
+        tempStyleListTop.push("border-l-2 border-t-2");
         tempStyleListBottom.push("border-l-2");
         isHigh = 1;
       } else if (prev === 0 && curr === 0) {
