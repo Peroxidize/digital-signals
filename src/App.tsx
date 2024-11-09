@@ -52,7 +52,7 @@ function App() {
           addState={addState}
           removeState={removeState}
         />
-        <div className="mt-[75px] px-10 w-full flex flex-col gap-4 transition-all duration-1000 ease-in-out">
+        <div className="mt-[75px] px-10 w-full flex flex-col gap-4 transition-all">
           <NRZ_L
             startingBit={startingBit}
             stateList={stateList}
