@@ -20,7 +20,7 @@ function BIPOLAR_AMI({
 
       if (isHigh === 1 && prev === 1 && curr === 1) {
         tempStyleListTop.push("border-l-2");
-        tempStyleListBottom.push("border-l-2 border-b-2 border-r-2");
+        tempStyleListBottom.push("border-l-2 border-b-2");
         isHigh = 0;
       } else if (isHigh === 0 && prev === 1 && curr === 1) {
         tempStyleListTop.push("border-l-2 border-t-2 border-r-2");
@@ -31,15 +31,15 @@ function BIPOLAR_AMI({
         tempStyleListBottom.push("border-t-[1px]");
       } else if (isHigh === 1 && prev === 0 && curr === 1) {
         tempStyleListTop.push("");
-        tempStyleListBottom.push("border-l-2 border-b-2 border-r-2");
+        tempStyleListBottom.push("border-l-2 border-b-2");
         isHigh = 0;
       } else if (isHigh === 0 && prev === 0 && curr === 1) {
-        tempStyleListTop.push("border-l-2 border-t-2 border-r-2");
+        tempStyleListTop.push("border-l-2 border-t-2");
         tempStyleListBottom.push("");
         isHigh = 1;
       } else if (prev === 1 && curr === 0) {
-        tempStyleListTop.push("border-b-[1px]");
-        tempStyleListBottom.push("border-t-[1px]");
+        tempStyleListTop.push("border-b-[1px]" + `${isHigh === 1 ? " border-l-2" : ""}`);
+        tempStyleListBottom.push("border-t-[1px]" + `${isHigh === 0 ? " border-l-2" : ""}`);
       }
     });
 
