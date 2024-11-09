@@ -1,6 +1,7 @@
 import { ChevronUp } from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import NumberFlow from "@number-flow/react";
 
 function Nav({
   bits,
@@ -40,10 +41,10 @@ function Nav({
       <nav className="flex items-center flex-wrap">
         <h3 className="text-lg mr-4">Number of bits: {bits}</h3>
         <div className="flex flex-col gap-1">
-          <Button variant="outline" size="icon" onClick={increaseCounter}>
+          <Button size="icon" variant="outline" onClick={increaseCounter}>
             <ChevronUp className="h-4 w-4" />
           </Button>
-          <Button variant="outline" size="icon" onClick={decreaseCounter}>
+          <Button size="icon" variant="outline" onClick={decreaseCounter}>
             <ChevronDown className="h-4 w-4" />
           </Button>
         </div>
@@ -54,7 +55,7 @@ function Nav({
           size="icon"
           onClick={changeStartingBit}
         >
-          {startingBit}
+          <NumberFlow value={startingBit} />
         </Button>
       </nav>
     </>

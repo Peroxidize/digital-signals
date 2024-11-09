@@ -1,3 +1,4 @@
+import NumberFlow from "@number-flow/react";
 import { Button } from "./ui/button";
 
 function NRZ_L({
@@ -24,7 +25,9 @@ function NRZ_L({
   return (
     <>
       <div className="flex items-center flex-1">
-        <h2 className="text-xl mr-4 min-w-[150px] max-w-[150px] text-right">NRZ-L</h2>
+        <h2 className="text-xl mr-4 min-w-[150px] max-w-[150px] text-right">
+          NRZ-L
+        </h2>
         {stateList.map((state, index) => {
           const prev = index === 0 ? startingBit : stateList[index - 1];
 
@@ -36,7 +39,7 @@ function NRZ_L({
                   className="text-lg"
                   onClick={() => changeState(index)}
                 >
-                  {state}
+                  <NumberFlow value={state} />
                 </Button>
               </div>
               <div className="h-[80px] w-[80px] outline outline-1 outline-zinc-500 overflow-visible">
